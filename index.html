@@ -1,160 +1,125 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="ko">
     <head>
-        <meta charest="utf-8">
-        <meta name="viewpoint" content="width=device-width">
-        <title>장바구니</title>
-        <link href="cartstyle.css" rel="stylesheet">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
-    </head>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="main-style.css">
+    </head> 
     <body>
-        <div class="header-wraaper">
-            <div class="home_icons">
-                <a href="https://javateam-7.netlify.app/"><i class='bx bx-home-alt-2'></i></a>
+        <div class="wrap">
+            <div class="intro_bg">
+                <div class="header" id="link_header">
+                    <div class="search_area">
+                        <form>
+                        <input type="search" placeholder="Search">
+                        <span>검색</span>
+                    </form>
+                    </div>
+                    <ul class="nav">
+                        <li><a href="#link_header">HOME</a></li>
+                        <li><a href="#link_main_text0">SHOP</a></li>
+                        <li><a href="#link_main_text1">ABOUT</a></li>
+                        <li><a href="signin.html">LOGIN</a></li>
+                    </ul>
+                </div>
+                <div class="intro_text">
+                <h1>도움이 필요합니다</h1>
+                <h4 class="contents1">4500여명 사상자를 낸 아프가니스탄 지진, 2023년 10월 7일경 규모 6.3 강진이 발생하여 또 큰 피해를 낳고 있습니다.<br> 여러분들의 도움이 절실합니다.</h4>
+                </div>
             </div>
-            <form>
-                <div class="search_box">
-                    <input type="text" placeholder="상품 검색">
-                    <i class='bx bx-search-alt-2'></i>
-                </div>
-            </form>
-            <div class="header_icons">
-                <div class="signin_menu">
-                    <i class='bx bx-user'></i>
-                </div>
-                <div class="cart">
-                    <i class='bx bx-cart' ></i>
-                </div>
             </div>
-        </div>
-        <div class="menu">
-            <ul>
-                <li>후원 목록</li>
-                <li>상품</li>
-                <li>특별 할인</li>
-                <li>고객센터</li>
+            <ul class="amount">
+                <li>
+                    <div>
+                        <div class="contents1">현재 후원 금액</div>
+                        <div class="result">$ 1,128,021</div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <div class="contents1">도움을 준 인원</div>
+                        <div class="result">234명</div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <div class="contents1">현재 보내진 구호물품</div>
+                        <div class="result">355개</div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <div class="contents1">남은 구호물품 개수</div>
+                        <div class="result">1,084</div>
+                    </div>
+                </li>
             </ul>
-        </div>
-        <div class="wrapper">
-            <h1>장바구니</h1>
-            <div class="main_project">
-                <div class="shop">
-                    <div class="box">
-                        <img src="상품_이미지/bag.jpg" alt="">
-                        <div class="content">
-                            <h3>확장형 백팩</h3>
-                            <h4>가격: 65,000원</h4>
-                            <p class="unit">수량: <input value="1"></p>
-                            <p class="btn_area">
-                                <i class='bx bxs-trash'></i>
-                                <span class="btn2">장바구니에서 제거</span>
-                            </p>
+            <div class="main_text0" id="link_main_text0">
+                <h1>SHOP</h1>
+                <div class="contents1">오늘의 베스트 상품</div>
+                <ul class="icons">
+                    <li>
+                        <div class="icon_img">
+                            <img src="image2/bag.jpg" class="custom-size">
                         </div>
+                        <div class="contents1_bold">확장형 백팩</div>
+                        <div class="contents2">
+                            65,000원
+                        </div>
+                        <div class="more">
+                            MORE
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon_img">
+                            <img src="image2/clothes.jpg" class="custom-size2">
+                        </div>
+                        <div class="contents1_bold">숏 패딩 점퍼</div>
+                        <div class="contents2">
+                            45,300원
+                        </div>
+                        <div class="more">
+                            MORE
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon_img">
+                            <img src="image2/bed.jpg" class="custom-size3">
+                        </div>
+                        <div class="contents1_bold">호텔형 패브릭 스트링 침대</div>
+                        <div class="contents2">
+                            299,000원
+                        </div>
+                        <div class="more">
+                            MORE
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="main_text1" id="link_main_text1">
+                <h1>ABOUT</h1>
+                <div class="contents1">현장에 배치된 직원들을 통해 빠르게 구호물품들을 전달하고 있습니다</div>
+                <div class="service">
+                    <div class="food_photo">
+                        <img src="image2/service8 - 복사본.jpg">
                     </div>
-                    <div class="box">
-                        <img src="상품_이미지/bed.jpg" alt="">
-                        <div class="content">
-                            <h3>호텔형 패브릭 스트링 침대</h3>
-                            <h4>가격: 299,000원</h4>
-                            <p class="unit">수량: <input value="1"></p>
-                            <p class="btn_area">
-                                <i class='bx bxs-trash'></i>
-                                <span class="btn2">장바구니에서 제거</span>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <img src="상품_이미지/clothes.jpg" alt="">
-                        <div class="content">
-                            <h3>숏 패딩 점퍼</h3>
-                            <h4>가격: 45,300원</h4>
-                            <p class="unit">수량: <input value="1"></p>
-                            <p class="btn_area">
-                                <i class='bx bxs-trash'></i>
-                                <span class="btn2">장바구니에서 제거</span>
-                            </p>
-                        </div>
+                    <div class="contents2">
+                        <h2>아프가니스탄 지진 긴급구호</h2>
+                        계속되는 분쟁으로 위급한 상황에 처한 아프가니스탄
+                        <br>수많은 가족이 생명을 지키기 위해 피난길에 올랐습니다. 
+                        <br>2021년, 약 70만명의 사람이 아프가니스탄에서 안전을 찾아 집을 떠났고
+                        <br>임시 정착촌에 거주하는 350만명의 국내 실향민을 포함한 인구 절반 이상이
+                        <br>인도적 지원에 의존하고 있습니다.
+                        <br>
+                        <br>2022년 6월 22일 아프가니스탄 남동부에서 발생한 규모 5.9의 강력한 지진으로 
+                        <br>많은 사람들이 피해를 입었습니다.
+                        <br>집이 손상되거나 파괴된 사람들은 도움을 청하고 있고,
+                        <br>콜레라 발병도 우려됩니다.
+                        <br>최근에 또 강진이 발생하여 피해가 더욱 커지고만 있습니다.
+                        <br>예기치 못한 자연재해로 고통받고 있는 이들의 생명을 구할 수 있도록 여러분의 도움이 절실합니다.
                     </div>
                 </div>
-
-                <div class="right_bar">
-                    <p><span>제품 가격</span><span>409,300원</span></p>
-                    <hr>
-                    <p><span>할인(20%)</span><span class="discount">-81,860원</span></p>
-                    <hr>
-                    <p><span>배송비</span><span>3000원</span></p>
-                    <hr>
-                    <p><span class="total">총액</span><span class="total">330,440원</span></p>
-                
-                    <a href="#"><i class='bx bxs-cart-alt' ></i>구매하기</a>
-                </div>
-            </div>    
-        </div>
-        
-        <div class="side_hr">
-            <h1>추천제품</h1>
-            <hr>
-        </div>
-
-        <div class="gallery">
-            <div class="content">
-                <img src="상품_이미지/camera.JPG">
-                <h3>DSLR 디지털카메라</h3>
-                <h6>146,000원</h6>
-                <ul>
-                    <li><i class='bx bxs-star' ></i></li>
-                    <li><i class='bx bxs-star' ></i></li>
-                    <li><i class='bx bxs-star' ></i></li>
-                    <li><i class='bx bxs-star' ></i></li>
-                    <li><i class='bx bxs-star'></i></li>
-                </ul>
-                <button class="buy_1">장바구니 담기</button>
             </div>
 
-            <div class="content">
-                <img src="상품_이미지/baseball.JPG">
-                <h3>캐치볼야구공</h3>
-                <h6>9,900원</h6>
-                <ul>
-                    <li><i class='bx bxs-star' ></i></li>
-                    <li><i class='bx bxs-star' ></i></li>
-                    <li><i class='bx bxs-star' ></i></li>
-                    <li><i class='bx bxs-star' ></i></li>
-                    <li><i class='bx bx-star'></i></li>
-                </ul>
-                <button class="buy_1">장바구니 담기</button>
-            </div>
-
-            <div class="content">
-                <img src="상품_이미지/chair.JPG">
-                <h3>목재 카페의자</h3>
-                <h6>37,000원</h6>
-                <ul>
-                    <li><i class='bx bxs-star' ></i></li>
-                    <li><i class='bx bxs-star' ></i></li>
-                    <li><i class='bx bxs-star' ></i></li>
-                    <li><i class='bx bx-star' ></i></li>
-                    <li><i class='bx bx-star'></i></li>
-                </ul>
-                <button class="buy_1">장바구니 담기</button>
-            </div>
-
-            <div class="content">
-                <img src="상품_이미지/piano.JPG">
-                <h3>그랜드 피아노</h3>
-                <h6>15,999,900원</h6>
-                <ul>
-                    <li><i class='bx bxs-star' ></i></li>
-                    <li><i class='bx bxs-star' ></i></li>
-                    <li><i class='bx bxs-star' ></i></li>
-                    <li><i class='bx bxs-star' ></i></li>
-                    <li><i class='bx bx-star'></i></li>
-                </ul>
-                <button class="buy_1">장바구니 담기</button>
-            </div>
         </div>
     </body>
-</html>
+</html>    
