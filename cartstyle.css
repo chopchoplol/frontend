@@ -258,8 +258,7 @@ a{
     cursor: pointer;
     padding-top: 10px;
     transition: .4s;
-    border: 1px rgb(223, 223, 223);
-    border-radius: 20px;
+    background-color: #efefeffb;
 }
 
 .content:hover{
