@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
     <head>
-        <meta charest="utf-8">
-        <meta name="viewpoint" content="width=device-width">
-        <title>장바구니</title>
-        <link href="cartstyle.css" rel="stylesheet">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+        <meta charset="utf-8"/>
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="shoppingcartstyle.css"/>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'/>
+        <title>장바구니개선안</title>
+        <script type="text/javascript" src="CART.js"></script>
     </head>
     <body>
+
+        <!--기본 헤더-->
         <div class="header-wraaper">
             <div class="home_icons">
                 <a href="https://javateam-7.netlify.app/"><i class='bx bx-home-alt-2'></i></a>
@@ -30,6 +30,8 @@
                 </div>
             </div>
         </div>
+
+        <!--네비게이션 바-->
         <div class="menu">
             <ul>
                 <li>후원 목록</li>
@@ -38,123 +40,118 @@
                 <li>고객센터</li>
             </ul>
         </div>
-        <div class="wrapper">
-            <h1>장바구니</h1>
-            <div class="main_project">
-                <div class="shop">
-                    <div class="box">
-                        <img src="상품_이미지/bag.jpg" alt="">
-                        <div class="content">
-                            <h3>확장형 백팩</h3>
-                            <h4>가격: 65,000원</h4>
-                            <p class="unit">수량: <input value="1"></p>
-                            <p class="btn_area">
-                                <i class='bx bxs-trash'></i>
-                                <span class="btn2">장바구니에서 제거</span>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <img src="상품_이미지/bed.jpg" alt="">
-                        <div class="content">
-                            <h3>호텔형 패브릭 스트링 침대</h3>
-                            <h4>가격: 299,000원</h4>
-                            <p class="unit">수량: <input value="1"></p>
-                            <p class="btn_area">
-                                <i class='bx bxs-trash'></i>
-                                <span class="btn2">장바구니에서 제거</span>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <img src="상품_이미지/clothes.jpg" alt="">
-                        <div class="content">
-                            <h3>숏 패딩 점퍼</h3>
-                            <h4>가격: 45,300원</h4>
-                            <p class="unit">수량: <input value="1"></p>
-                            <p class="btn_area">
-                                <i class='bx bxs-trash'></i>
-                                <span class="btn2">장바구니에서 제거</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="right_bar">
-                    <p><span>제품 가격</span><span>409,300원</span></p>
-                    <hr>
-                    <p><span>할인(20%)</span><span class="discount">-81,860원</span></p>
-                    <hr>
-                    <p><span>배송비</span><span>3000원</span></p>
-                    <hr>
-                    <p><span class="total">총액</span><span class="total">330,440원</span></p>
-                
-                    <a href="#"><i class='bx bxs-cart-alt' ></i>구매하기</a>
-                </div>
-            </div>    
+        <div class="back">
+            <p>장바구니</p>
         </div>
+
+        <!--장바구니 레이아웃&폼-->
+        <form name="orderform" id="orderform" method="post" class="orderform" action="/Page" onsubmit="return false;">
         
-        <div class="side_hr">
-            <h1>추천제품</h1>
-            <hr>
-        </div>
+            <input type="hidden" name="cmd" value="order">
+            <div class="basketdiv" id="basket">
+                <div class="row head">
+                    <div class="subdiv">
+                        <div class="check">선택</div>
+                        <div class="img">이미지</div>
+                        <div class="pname">상품명</div>
+                    </div>
+                    <div class="subdiv">
+                        <div class="basketprice">가격</div>
+                        <div class="num">수량</div>
+                        <div class="sum">합계</div>
+                    </div>
+                    <div class="subdiv">
 
-        <div class="gallery">
-            <div class="content">
-                <img src="상품_이미지/camera.JPG">
-                <h3>DSLR 디지털카메라</h3>
-                <h6>146,000원</h6>
-                <ul>
-                    <li><i class='bx bxs-star' ></i></li>
-                    <li><i class='bx bxs-star' ></i></li>
-                    <li><i class='bx bxs-star' ></i></li>
-                    <li><i class='bx bxs-star' ></i></li>
-                    <li><i class='bx bxs-star'></i></li>
-                </ul>
-                <button class="buy_1">장바구니 담기</button>
+                        <div class="basketcmd">삭제</div>
+                    </div>
+                    <div class="split"></div>
+                </div>
+        
+                <div class="row data">
+                    <div class="subdiv">
+                        <div class="check"><input type="checkbox" name="buy" value="260" checked="" onclick="javascript:basket.checkItem();">&nbsp;</div>
+                        <div class="img"><img src="상품_이미지/bag.jpg" width="50px" height="50px"></div>
+                        <div class="pname">
+                            <span>확장형 백팩</span>
+                        </div>
+                    </div>
+                    <div class="subdiv">
+                        <div class="basketprice"><input type="hidden" name="p_price" id="p_price1" class="p_price" value="20000">20,000원</div>
+                        <div class="num">
+                            <div class="updown">
+                                <input type="text" name="p_num1" id="p_num1" size="2" maxlength="4" class="p_num" value="1" onkeyup="javascript:basket.changePNum(1);">
+                            </div>
+                        </div>
+                        <div class="sum">20,000원</div>
+                    </div>
+                    <div class="subdiv">
+                        <div class="basketcmd"><a href="javascript:void(0)" class="abutton" onclick="javascript:basket.delItem();">삭제</a></div>
+                    </div>
+                </div>
+                <div class="row data">
+                    <div class="subdiv">
+                        <div class="check"><input type="checkbox" name="buy" value="261" checked="" onclick="javascript:basket.checkItem();">&nbsp;</div>
+                        <div class="img"><img src="상품_이미지/bed.jpg" width="60"></div>
+                        <div class="pname">
+                            <span>호텔형 페브릭 스프링 침대</span>
+                        </div>
+                    </div>
+                    <div class="subdiv">
+                        <div class="basketprice"><input type="hidden" name="p_price" id="p_price2" class="p_price" value="299000">299,000원</div>
+                        <div class="num">
+                            <div class="updown">
+                                <input type="text" name="p_num2" id="p_num2" size="2" maxlength="4" class="p_num" value="1" onkeyup="javascript:basket.changePNum(2);">
+                                
+                            </div>
+                        </div>
+                        <div class="sum">299,000원</div>
+                    </div>
+                    <div class="subdiv">
+                        <div class="basketcmd"><a href="javascript:void(0)" class="abutton" onclick="javascript:basket.delItem();">삭제</a></div>
+                    </div>
+                </div>
+                <div class="row data">
+                    <div class="subdiv">
+                        <div class="check"><input type="checkbox" name="buy" value="262" checked="" onclick="javascript:basket.checkItem();">&nbsp;</div>
+                        <div class="img"><img src="상품_이미지/clothes.jpg" width="60"></div>
+                        <div class="pname">
+                            <span>숏패딩 점퍼</span>
+                        </div>
+                    </div>
+                    <div class="subdiv">
+                        <div class="basketprice"><input type="hidden" name="p_price" id="p_price3" class="p_price" value="45300">45,300원</div>
+                        <div class="num">
+                            <div class="updown">
+                                <input type="text" name="p_num3" id="p_num3" size="2" maxlength="4" class="p_num" value="1" onkeyup="javascript:basket.changePNum(3);">
+                            </div>
+                        </div>
+                        <div class="sum">45,300원</div>
+                    </div>
+                    <div class="subdiv">
+                        <div class="basketcmd"><a href="javascript:void(0)" class="abutton" onclick="javascript:basket.delItem();">삭제</a></div>
+                    </div>
+                </div>
+        
             </div>
 
-            <div class="content">
-                <img src="상품_이미지/baseball.JPG">
-                <h3>캐치볼야구공</h3>
-                <h6>9,900원</h6>
-                <ul>
-                    <li><i class='bx bxs-star' ></i></li>
-                    <li><i class='bx bxs-star' ></i></li>
-                    <li><i class='bx bxs-star' ></i></li>
-                    <li><i class='bx bxs-star' ></i></li>
-                    <li><i class='bx bx-star'></i></li>
-                </ul>
-                <button class="buy_1">장바구니 담기</button>
+            <!--금액 합계와 개수 합계출력-->
+            <div class="right-align basketrowcmd">
+                <a href="javascript:void(0)" class="abutton" onclick="javascript:basket.delCheckedItem();">선택상품삭제</a>
+                <a href="javascript:void(0)" class="abutton" onclick="javascript:basket.delAllItem();">장바구니비우기</a>
             </div>
 
-            <div class="content">
-                <img src="상품_이미지/chair.JPG">
-                <h3>목재 카페의자</h3>
-                <h6>37,000원</h6>
-                <ul>
-                    <li><i class='bx bxs-star' ></i></li>
-                    <li><i class='bx bxs-star' ></i></li>
-                    <li><i class='bx bxs-star' ></i></li>
-                    <li><i class='bx bx-star' ></i></li>
-                    <li><i class='bx bx-star'></i></li>
-                </ul>
-                <button class="buy_1">장바구니 담기</button>
-            </div>
+            <div class="bigtext right-align sumcount" id="sum_p_num">상품갯수: 3개</div>
+            <div class="bigtext right-align box blue summoney" id="sum_p_price">합계금액: 364,300원</div>
 
-            <div class="content">
-                <img src="상품_이미지/piano.JPG">
-                <h3>그랜드 피아노</h3>
-                <h6>15,999,900원</h6>
-                <ul>
-                    <li><i class='bx bxs-star' ></i></li>
-                    <li><i class='bx bxs-star' ></i></li>
-                    <li><i class='bx bxs-star' ></i></li>
-                    <li><i class='bx bxs-star' ></i></li>
-                    <li><i class='bx bx-star'></i></li>
-                </ul>
-                <button class="buy_1">장바구니 담기</button>
+            <div id="goorder" class="">
+                <div class="clear"></div>
+                <div class="buttongroup center-align cmd">
+                    <a href="javascript:void(0);">선택한 상품 주문</a>
+                </div>
             </div>
-        </div>
+        </form>
+
+        
     </body>
 </html>
