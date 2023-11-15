@@ -1,0 +1,154 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.header-wraaper{
+    position: relative;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px 5px;
+    margin: 20px 20px 30px 20px;
+}
+
+.header-wraaper .home_icons i{
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.header-wraaper .search_box{
+    position: relative;
+    height: 50px;
+}
+
+.search_box input{
+    height: 100%;
+    width: 500px;
+    border-radius: 40px;
+    left: 0px;
+    font-size: 16px;
+    padding: 10px 50px 10px 20px;
+}
+
+.search_box i{
+    position: absolute;
+    font-size: 30px;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.header-wraaper .header_icons{
+    display: flex;
+    flex-direction: row;
+}
+
+.header_icons .signin_menu i{
+    font-size: 40px;
+    padding: 5px 10px 5px 10px;
+    cursor: pointer;
+}
+
+.header_icons .cart i{
+    padding: 5px 10px 5px 10px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.menu{
+    font-size: 20px;
+    padding: 15px;
+    background-color: rgba(80, 72, 72, .6);
+    height: 60px;
+    color: #fff;
+    margin: 0 auto;
+    font-weight: 600;
+}
+
+.menu ul{
+    list-style: none;
+    text-align: center;
+    align-items: center;
+}
+
+.menu ul li{
+    display: inline-block;
+    margin: -5px 50px;
+    cursor: pointer;
+}
+
+.center_text h1{
+    color: black;
+    font-size: 28px;
+    text-align: center;
+    text-transform: capitalize;
+    margin: 50px;
+}
+
+.products{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+    gap: 2rem;
+    margin: 0px 200px 200px;
+}
+
+.row{
+    position: relative;
+    transition: all .40s;
+}
+
+.row img{
+    width: 100%;
+    height: auto;
+    transition: all .40s;
+}
+
+.row img:hover{
+    transform: scale(0.9);
+}
+
+.product_text{
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: #27b737;
+    padding: 3px 10px;
+    border-radius: 2px;
+}
+
+.heart_icon{
+    position: absolute;
+    right: 0;
+    font-size: 30px;   
+}
+
+.heart_icon:hover{
+    color: #ee1c47;
+}
+
+.ratting_star{
+    color: #ff8c00;
+    font-size: 18px;
+}
+
+.price h4{
+    color: #111;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.price p{
+    color: #151515;
+    font-size: 14px;
+    font-weight: 600;
+}
